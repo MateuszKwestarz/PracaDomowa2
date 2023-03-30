@@ -1,0 +1,124 @@
+
+#header {
+    background-color:rgb(46, 29, 85);
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+
+.gamebox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game {
+    margin-top: 10px;
+    margin-bottom: 20px; 
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid rgb(37, 37, 37);
+}
+.board {
+   width: 100px;
+   height: 100px;
+   background-color: #2b2b2b77; 
+   border-radius: 5px;
+   border: 2px solid rgb(37, 37, 37);
+   transition: all 0.5s linear;
+   cursor: pointer;
+   position: relative;
+
+}
+.board:hover {
+    background-color: #555555;
+}
+.panel {
+    height: 50px;
+    font-size: 30px;
+    font-weight: 700;
+}
+.board--filled-X::after, .board--filled-X::before{
+    position: absolute;
+    content: '';
+    height: 5px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    background-color: rgb(46, 29, 85);
+}
+.board--filled-X::before{
+    transform: translateY(-50%) rotate(-45deg);
+}
+.board--filled-X::after{
+    transform: translateY(-50%) rotate(45deg);
+}
+.board--filled-O::before {
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    border: 3px solid rgb(255, 255, 255);
+    height: 80%;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+}
+.reset {
+    background-color:rgb(46, 29, 85);
+    color:white;
+    margin-top: 20px;
+    padding: 10px 20 px;
+    border: 2px solid rgb(37, 37, 37);
+    border-radius: 5px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: all 0.05s linear;
+}
+.reset:hover {
+    background-color: #555555;
+}
+
+#footer {
+    background-color:rgb(46, 29, 85);
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;
+}
+
+.single-player {
+    background-color:rgb(46, 29, 85);
+    color:white;
+    margin-top: 20px;
+    padding: 10px 20 px;
+    border: 2px solid rgb(37, 37, 37);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.05s linear;
+    
+}
+
+.single-player:hover {
+    background-color: #555555;
+}
+
+.two-player {
+    background-color:rgb(46, 29, 85);
+    color:white;
+    margin-top: 20px;
+    padding: 10px 20 px;
+    border: 2px solid rgb(37, 37, 37);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.05s linear;
+    
+}
+
+.two-player:hover {
+    background-color: #555555;
+}
